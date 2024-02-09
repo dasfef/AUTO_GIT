@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 location=$HOME/Desktop/PJ_auto_git
 log_file=$HOME/Desktop/PJ_auto_git/date_log.txt
 PUSH_FILE=$HOME/Desktop/PJ_auto_git/push.txt
@@ -25,8 +25,10 @@ fi
 
 if [ ! -z "$PUSH_FILE" ]; then
 	LAST_NUM=$(tail -n1 $PUSH_FILE | grep -o -E '[0-9]+')
+	echo "LAST_NUM before: $LAST_NUM"
 	LAST_NUM=$(echo $LAST_NUM | sed 's/^0*//')
-	NEW_NUM=$((10#LAST_NUM + 1))
+	echo "LAST_NUM after: $LAST_NUM"
+	NEW_NUM=$((10#$LAST_NUM + 1))
 	CURRENT_NUM="INDEX : $(printf '%03d' $NEW_NUM)"
 	echo "AUTO GIT PUSHED COUNT | "$CURRENT_NUM >> $PUSH_FILE
 else
