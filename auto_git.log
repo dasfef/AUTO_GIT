@@ -5,3 +5,15 @@ PRESENTED BY _CYW_
 2024-02-10-00:12:01
 /Users/dasfef/Desktop/PJ_auto_git/auto_git.sh: line 18: ddiff: command not found
 /Users/dasfef/Desktop/PJ_auto_git/auto_git.sh: line 29: 10#LAST_NUM: value too great for base (error token is "10#LAST_NUM")
+[main 4470d8e] AUTO GIT PUSHED | INDEX : AUTO GIT PUSHED COUNT | INDEX : 008 | DATE : 2024-02-10-00:12:01, DAY001
+ 4 files changed, 9 insertions(+), 417 deletions(-)
+ delete mode 100644 .auto_git.sh.swp
+ rewrite auto_git.log (99%)
+fatal: could not read Username for 'https://github.com': Device not configured
+[ Auto git push START! ]
+
+摩斧作針
+PRESENTED BY _CYW_
+2024-02-10-00:13:00
+/Users/dasfef/Desktop/PJ_auto_git/auto_git.sh: line 18: ddiff: command not found
+/Users/dasfef/Desktop/PJ_auto_git/auto_git.sh: line 29: 10#LAST_NUM: value too great for base (error token is "10#LAST_NUM")
