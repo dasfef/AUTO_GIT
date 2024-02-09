@@ -25,7 +25,7 @@ fi
 
 if [ ! -z "$PUSH_FILE" ]; then
 	LAST_NUM=$(tail -n1 $PUSH_FILE | grep -o -E '[0-9]+')
-	NEW_NUM=$((LAST_NUM + 1))
+	NEW_NUM=$((10#LAST_NUM + 1))
 	CURRENT_NUM="INDEX : $(printf '%03d' $NEW_NUM)"
 	echo "AUTO GIT PUSHED COUNT | "$CURRENT_NUM >> $PUSH_FILE
 else
@@ -34,6 +34,7 @@ fi
 
 echo $CURRENT_DATETIME" git pushed :" $LOG_MESSAGE >> $log_file
 
+cd /users/dasfef/desktop/PJ_auto_git
 git add .
 
 git commit -m "AUTO GIT PUSHED | INDEX : $(tail -n1 $PUSH_FILE) | DATE : $CURRENT_DATETIME, $(tail -n1 $log_file | grep -o -E '\bD\w*' | tail -n1)"
