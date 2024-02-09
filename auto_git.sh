@@ -25,6 +25,7 @@ fi
 
 if [ ! -z "$PUSH_FILE" ]; then
 	LAST_NUM=$(tail -n1 $PUSH_FILE | grep -o -E '[0-9]+')
+	LAST_NUM=$(echo $LAST_NUM | sed 's/^0*//')
 	NEW_NUM=$((10#LAST_NUM + 1))
 	CURRENT_NUM="INDEX : $(printf '%03d' $NEW_NUM)"
 	echo "AUTO GIT PUSHED COUNT | "$CURRENT_NUM >> $PUSH_FILE
